@@ -1,5 +1,5 @@
 <?xml version="1.0" encoding="utf-8"?>
-<androidx.constraintlayout.widget.ConstraintLayout xmlns:android="http://schemas.android.com/apk/res/android"
+<ScrollView xmlns:android="http://schemas.android.com/apk/res/android"
     xmlns:app="http://schemas.android.com/apk/res-auto"
     xmlns:tools="http://schemas.android.com/tools"
     android:id="@+id/main"
@@ -7,13 +7,167 @@
     android:layout_height="match_parent"
     tools:context=".MainActivity">
 
-    <TextView
-        android:layout_width="wrap_content"
-        android:layout_height="wrap_content"
-        android:text="Hello World!"
-        app:layout_constraintBottom_toBottomOf="parent"
-        app:layout_constraintEnd_toEndOf="parent"
-        app:layout_constraintStart_toStartOf="parent"
-        app:layout_constraintTop_toTopOf="parent" />
+    <androidx.constraintlayout.widget.ConstraintLayout
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content">
 
-</androidx.constraintlayout.widget.ConstraintLayout>
+        <TextView
+            android:id="@+id/labelCombustiveis"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_marginStart="16dp"
+            android:layout_marginTop="16dp"
+            android:text="@string/combustiveis_title"
+            android:textSize="24sp"
+            app:layout_constraintStart_toStartOf="parent"
+            app:layout_constraintTop_toTopOf="parent" />
+
+        <ImageView
+            android:id="@+id/imageView"
+            android:layout_width="36dp"
+            android:layout_height="36dp"
+            android:layout_marginTop="16dp"
+            android:layout_marginEnd="16dp"
+            app:layout_constraintEnd_toEndOf="parent"
+            app:layout_constraintTop_toTopOf="parent"
+            app:srcCompat="@drawable/question_mark_icon"
+            android:contentDescription="@string/icone_descricao"/>
+
+        <TextView
+            android:id="@+id/labelOpcao1"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_marginTop="16dp"
+            android:text="@string/opcao_1"
+            android:textSize="18sp"
+            app:layout_constraintStart_toStartOf="@id/labelCombustiveis"
+            app:layout_constraintTop_toBottomOf="@id/labelCombustiveis" />
+
+        <TextView
+            android:id="@+id/valueOpcao1"
+            android:layout_width="160dp"
+            android:layout_height="wrap_content"
+            android:layout_marginStart="8dp"
+            android:text=""
+            android:hint="@string/combustivel_1_hint"
+            app:layout_constraintBottom_toBottomOf="@id/labelOpcao1"
+            app:layout_constraintStart_toEndOf="@id/labelOpcao1" />
+
+        <TextView
+            android:id="@+id/opcao1Autonomia"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:text="@string/opcao_1_autonomia"
+            app:layout_constraintStart_toStartOf="@id/valueOpcao1"
+            app:layout_constraintTop_toBottomOf="@id/valueOpcao1" />
+
+        <Button
+            android:id="@+id/opcao1Bt"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:text="@string/buscar"
+            app:layout_constraintBottom_toBottomOf="@+id/opcao1Autonomia"
+            app:layout_constraintEnd_toEndOf="parent"
+            app:layout_constraintStart_toEndOf="@+id/valueOpcao1"
+            />
+
+        <TextView
+            android:id="@+id/labelOpcao2"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_marginTop="32dp"
+            android:layout_marginBottom="16dp"
+            android:text="@string/opcao_2"
+            android:textSize="18sp"
+            app:layout_constraintStart_toStartOf="@id/labelCombustiveis"
+            app:layout_constraintTop_toBottomOf="@id/labelOpcao1" />
+
+        <TextView
+            android:id="@+id/valueOpcao2"
+            android:layout_width="160dp"
+            android:layout_height="wrap_content"
+            android:layout_marginStart="8dp"
+            android:hint="@string/combustivel_2_hint"
+            android:text=""
+            app:layout_constraintBottom_toBottomOf="@+id/labelOpcao2"
+            app:layout_constraintStart_toEndOf="@id/labelOpcao2"
+            app:layout_constraintTop_toTopOf="@+id/labelOpcao2" />
+
+        <TextView
+            android:id="@+id/opcao2Autonomia"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:text="@string/opcao_2_autonomia"
+            app:layout_constraintStart_toStartOf="@id/valueOpcao2"
+            app:layout_constraintTop_toBottomOf="@id/valueOpcao2" />
+
+        <Button
+            android:id="@+id/opcao2Bt"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:text="@string/buscar"
+            app:layout_constraintBottom_toBottomOf="@+id/opcao2Autonomia"
+            app:layout_constraintEnd_toEndOf="parent"
+            app:layout_constraintStart_toEndOf="@+id/valueOpcao2" />
+
+        <TextView
+            android:id="@+id/labelPreco1"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_marginTop="60dp"
+            android:importantForAutofill="no"
+            android:text="@string/opcao_1_preco"
+            app:layout_constraintStart_toStartOf="@id/labelOpcao2"
+            app:layout_constraintTop_toBottomOf="@id/labelOpcao2" />
+
+        <EditText
+            android:id="@+id/precoCombustivel1"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_marginStart="8dp"
+            android:hint="@string/opcao_1_preco_hint"
+            android:importantForAutofill="no"
+            android:minHeight="48dp"
+            android:inputType="numberDecimal"
+            app:layout_constraintBottom_toBottomOf="@id/labelPreco1"
+            app:layout_constraintStart_toEndOf="@id/labelPreco1"
+            app:layout_constraintTop_toTopOf="@+id/labelPreco1" />
+
+        <TextView
+            android:id="@+id/labelPreco2"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_marginTop="30dp"
+            android:importantForAutofill="no"
+            android:text="@string/opcao_2_preco"
+            app:layout_constraintStart_toStartOf="@id/labelPreco1"
+            app:layout_constraintTop_toBottomOf="@id/labelPreco1" />
+
+        <EditText
+            android:id="@+id/precoCombustivel2"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_marginStart="8dp"
+            android:hint="@string/opcao_2_preco_hint"
+            android:importantForAutofill="no"
+            android:minHeight="48dp"
+            android:inputType="numberDecimal"
+            app:layout_constraintBottom_toBottomOf="@+id/labelPreco2"
+            app:layout_constraintStart_toEndOf="@id/labelPreco2"
+            app:layout_constraintTop_toTopOf="@+id/labelPreco2" />
+
+        <TextView
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_marginTop="8dp"
+            android:text="@string/resultado"
+            android:textSize="20sp"
+            app:layout_constraintStart_toStartOf="@id/labelPreco2"
+            app:layout_constraintTop_toBottomOf="@id/precoCombustivel2" />
+
+
+    </androidx.constraintlayout.widget.ConstraintLayout>
+
+
+</ScrollView>
+
