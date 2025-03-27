@@ -3,9 +3,9 @@
     <string name="combustiveis_title">Combustíveis</string>
     <string name="opcao_1">Opção 1</string>
     <string name="combustivel_1_hint">Combustivel 1</string>
-    <string name="opcao_1_autonomia">Autonomia</string>
+    <string name="opcao_1_consumo">Consumo: %s</string>
     <string name="buscar">Buscar</string>
-    <string name="opcao_2_autonomia">Autonomia 2</string>
+    <string name="opcao_2_consumo">Consumo: %s</string>
     <string name="combustivel_2_hint">Combustivel 2</string>
     <string name="opcao_1_preco">Preço da Opção 1</string>
     <string name="opcao_1_preco_hint">Preço do combustivel 1</string>
@@ -14,4 +14,5 @@
     <string name="resultado">Resultado</string>
     <string name="opcao_2">Opção 2</string>
     <string name="icone_descricao">Icone de interregoção para ajuda</string>
+    <string name="title_lista_combustiveis">Combustiveís disponíveis</string>
 </resources>
