@@ -38,13 +38,20 @@ class MainActivity : AppCompatActivity() {
                 val opcao = it.data?.getStringExtra("opcaoNome")
                 val consumo = it.data?.getDoubleExtra("opcaoConsumo", 0.0)
 
+                val formattedConsumo = consumo
+                    .toString()
+                    .replace(".", ",")
+                    .plus(" km/l")
+
                 if (opcaoAtual == 1) {
                     binding.valueOpcao1.text = opcao
-                    binding.opcao1Consumo.text = getString(R.string.opcao_1_consumo, consumo.toString())
+                    binding.opcao1Consumo.text =
+                        getString(R.string.opcao_1_consumo, formattedConsumo)
                 }
                 if (opcaoAtual == 2) {
                     binding.valueOpcao2.text = opcao
-                    binding.opcao2Consumo.text = getString(R.string.opcao_2_consumo, consumo.toString())
+                    binding.opcao2Consumo.text =
+                        getString(R.string.opcao_2_consumo, formattedConsumo)
                 }
 
                 opcaoAtual = 0
