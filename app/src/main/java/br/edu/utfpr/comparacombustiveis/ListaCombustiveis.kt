@@ -21,7 +21,7 @@ class ListaCombustiveis : AppCompatActivity() {
 
             val nome = when (position) {
                 0 -> "Gasolina"
-                else -> "Alcóol"
+                else -> "Álcool"
             }
             intent.putExtra("opcaoNome", nome)
             intent.putExtra("opcaoConsumo", consumo)

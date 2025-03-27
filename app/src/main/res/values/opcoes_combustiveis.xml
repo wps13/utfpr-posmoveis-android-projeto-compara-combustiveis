@@ -2,6 +2,6 @@
 <resources>
     <string-array name="combustiveis">
         <item>Gasolina - Consumo urbano: 12,9 km/l</item>
-        <item>Alcóol - Consumo urbano: 9,1 km/l</item>
+        <item>Álcool - Consumo urbano: 9,1 km/l</item>
     </string-array>
 </resources>
