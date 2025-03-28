@@ -3,9 +3,13 @@
     <string name="combustiveis_title">Combustíveis</string>
     <string name="opcao_1">Opção 1</string>
     <string name="combustivel_1_hint">Combustivel 1</string>
-    <string name="opcao_1_consumo">Consumo: %s</string>
+    <string name="opcao_1_consumo">Consumo:</string>
+    <string name="opcao_1_consumo_value">0.0</string>
+    <string name="opcao_1_consumo_suffix">km/l</string>
     <string name="buscar">Buscar</string>
-    <string name="opcao_2_consumo">Consumo: %s</string>
+    <string name="opcao_2_consumo">Consumo:</string>
+    <string name="opcao_2_consumo_value">0.0</string>
+    <string name="opcao_2_consumo_suffix">km/l</string>
     <string name="combustivel_2_hint">Combustivel 2</string>
     <string name="opcao_1_preco">Preço da Opção 1</string>
     <string name="opcao_1_preco_hint">Preço do combustivel 1</string>

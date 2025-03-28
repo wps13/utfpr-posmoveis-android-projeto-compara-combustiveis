@@ -41,17 +41,14 @@ class MainActivity : AppCompatActivity() {
                 val formattedConsumo = consumo
                     .toString()
                     .replace(".", ",")
-                    .plus(" km/l")
 
                 if (opcaoAtual == 1) {
                     binding.valueOpcao1.text = opcao
-                    binding.opcao1Consumo.text =
-                        getString(R.string.opcao_1_consumo, formattedConsumo)
+                    binding.opcao1ConsumoValue.text = formattedConsumo
                 }
                 if (opcaoAtual == 2) {
                     binding.valueOpcao2.text = opcao
-                    binding.opcao2Consumo.text =
-                        getString(R.string.opcao_2_consumo, formattedConsumo)
+                    binding.opcao2ConsumoValue.text = formattedConsumo
                 }
 
                 opcaoAtual = 0

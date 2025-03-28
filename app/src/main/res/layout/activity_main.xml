@@ -61,6 +61,24 @@
             app:layout_constraintStart_toStartOf="@id/valueOpcao1"
             app:layout_constraintTop_toBottomOf="@id/valueOpcao1" />
 
+        <TextView
+            android:id="@+id/opcao1ConsumoValue"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_marginStart="4dp"
+            android:text="@string/opcao_1_consumo_value"
+            app:layout_constraintStart_toEndOf="@id/opcao1Consumo"
+            app:layout_constraintTop_toBottomOf="@id/valueOpcao1" />
+
+        <TextView
+            android:id="@+id/opcao1ConsumoSuffix"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_marginStart="4dp"
+            android:text="@string/opcao_1_consumo_suffix"
+            app:layout_constraintStart_toEndOf="@id/opcao1ConsumoValue"
+            app:layout_constraintTop_toBottomOf="@id/valueOpcao1" />
+
         <Button
             android:id="@+id/opcao1Bt"
             android:layout_width="wrap_content"
@@ -99,6 +117,24 @@
             android:layout_height="wrap_content"
             android:text="@string/opcao_2_consumo"
             app:layout_constraintStart_toStartOf="@id/valueOpcao2"
+            app:layout_constraintTop_toBottomOf="@id/valueOpcao2" />
+
+        <TextView
+            android:id="@+id/opcao2ConsumoValue"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_marginStart="4dp"
+            android:text="@string/opcao_2_consumo_value"
+            app:layout_constraintStart_toEndOf="@id/opcao2Consumo"
+            app:layout_constraintTop_toBottomOf="@id/valueOpcao2" />
+
+        <TextView
+            android:id="@+id/opcao2ConsumoSuffix"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_marginStart="4dp"
+            android:text="@string/opcao_2_consumo_suffix"
+            app:layout_constraintStart_toEndOf="@id/opcao2ConsumoValue"
             app:layout_constraintTop_toBottomOf="@id/valueOpcao2" />
 
         <Button
