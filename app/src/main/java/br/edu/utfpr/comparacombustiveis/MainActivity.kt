@@ -60,6 +60,8 @@ class MainActivity : AppCompatActivity() {
                 R.string.resultado_descricao,
                 "nenhum, os combustíveis escolhidos são iguais."
             )
+            binding.resultadoDescricao2.text =
+                getString(R.string.resultado_descricao_2, "", "")
             return
         }
 
