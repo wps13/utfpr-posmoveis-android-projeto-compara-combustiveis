@@ -3,6 +3,7 @@ package br.edu.utfpr.comparacombustiveis
 import android.annotation.SuppressLint
 import android.content.Intent
 import android.os.Bundle
+import android.text.Editable
 import androidx.activity.result.contract.ActivityResultContracts
 import androidx.appcompat.app.AppCompatActivity
 import br.edu.utfpr.comparacombustiveis.databinding.ActivityMainBinding
@@ -43,53 +44,20 @@ class MainActivity : AppCompatActivity() {
 
     @SuppressLint("DefaultLocale")
     private fun onResultadoClick() {
-        val errorMessage = "É necessário definir um combustível"
-
         val opcao1Value = binding.valueOpcao1.text
         val opcao2Value = binding.valueOpcao2.text
 
-        if (opcao1Value.isEmpty()) {
-            binding.valueOpcao1.error = errorMessage
-            return
-        }
-        if (opcao2Value.isEmpty()) {
-            binding.valueOpcao2.error = errorMessage
-            return
-        }
-
-        if (opcao1Value.equals(opcao2Value)) {
-            binding.resultadoDescricao.text = getString(
-                R.string.resultado_descricao,
-                "nenhum, os combustíveis escolhidos são iguais."
-            )
-            binding.resultadoDescricao2.text =
-                getString(R.string.resultado_descricao_2, "", "")
-            return
-        }
+        if (checaCamposVazios(opcao1Value, opcao2Value)) return
 
         val opcao1Preco = binding.precoCombustivel1.text
         val opcao2Preco = binding.precoCombustivel2.text
 
-        val errorMessagePreco = "O preço do combustivel deve ser fornecido"
+        if (checaPrecosVazios(opcao1Preco, opcao2Preco)) return
 
-        if (opcao1Preco.isEmpty()) {
-            binding.precoCombustivel1.error = errorMessagePreco
-            return
-        }
-
-        if (opcao2Preco.isEmpty()) {
-            binding.precoCombustivel2.error = errorMessagePreco
-            return
-        }
-
-        var gasolinaOption: Int = 0
-
-        if (opcao1Value.toString().lowercase() == "gasolina") {
-            gasolinaOption = 1
-        }
-
-        if (opcao2Value.toString().lowercase() == "gasolina") {
-            gasolinaOption = 2
+        val gasolinaOption = if (opcao1Value.toString().lowercase() == "gasolina") {
+            1
+        } else {
+            2
         }
 
 
@@ -126,7 +94,7 @@ class MainActivity : AppCompatActivity() {
         }
 
 
-        val rendimento = (alcoolConsumo/gasolinaConsumo)
+        val rendimento = (alcoolConsumo / gasolinaConsumo)
 
         val precoMaxAlcool = rendimento * gasolinaPreco
 
@@ -141,6 +109,50 @@ class MainActivity : AppCompatActivity() {
         binding.resultadoDescricao2.text =
             getString(R.string.resultado_descricao_2, rendimentoFormatado, precoMaxFormatado)
 
+    }
+
+    private fun checaPrecosVazios(
+        opcao1Preco: Editable,
+        opcao2Preco: Editable
+    ): Boolean {
+        val errorMessagePreco = "O preço do combustivel deve ser fornecido"
+
+        if (opcao1Preco.isEmpty()) {
+            binding.precoCombustivel1.error = errorMessagePreco
+            return true
+        }
+
+        if (opcao2Preco.isEmpty()) {
+            binding.precoCombustivel2.error = errorMessagePreco
+            return true
+        }
+        return false
+    }
+
+    private fun checaCamposVazios(
+        opcao1Value: CharSequence,
+        opcao2Value: CharSequence
+    ): Boolean {
+        val errorMessage = "É necessário definir um combustível"
+        if (opcao1Value.isEmpty()) {
+            binding.valueOpcao1.error = errorMessage
+            return true
+        }
+        if (opcao2Value.isEmpty()) {
+            binding.valueOpcao2.error = errorMessage
+            return true
+        }
+
+        if (opcao1Value == opcao2Value) {
+            binding.resultadoDescricao.text = getString(
+                R.string.resultado_descricao,
+                "nenhum, os combustíveis escolhidos são iguais."
+            )
+            binding.resultadoDescricao2.text =
+                getString(R.string.resultado_descricao_2, "", "")
+            return true
+        }
+        return false
     }
 
     private fun onOpcaoClick() {
