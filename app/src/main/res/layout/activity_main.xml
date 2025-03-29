@@ -28,10 +28,10 @@
             android:layout_height="36dp"
             android:layout_marginTop="16dp"
             android:layout_marginEnd="16dp"
+            android:contentDescription="@string/icone_descricao"
             app:layout_constraintEnd_toEndOf="parent"
             app:layout_constraintTop_toTopOf="parent"
-            app:srcCompat="@drawable/question_mark_icon"
-            android:contentDescription="@string/icone_descricao"/>
+            app:srcCompat="@drawable/question_mark_icon" />
 
         <TextView
             android:id="@+id/labelOpcao1"
@@ -48,8 +48,8 @@
             android:layout_width="160dp"
             android:layout_height="wrap_content"
             android:layout_marginStart="8dp"
-            android:text=""
             android:hint="@string/combustivel_1_hint"
+            android:text=""
             app:layout_constraintBottom_toBottomOf="@id/labelOpcao1"
             app:layout_constraintStart_toEndOf="@id/labelOpcao1" />
 
@@ -86,8 +86,7 @@
             android:text="@string/buscar"
             app:layout_constraintBottom_toBottomOf="@+id/opcao1Consumo"
             app:layout_constraintEnd_toEndOf="parent"
-            app:layout_constraintStart_toEndOf="@+id/valueOpcao1"
-            />
+            app:layout_constraintStart_toEndOf="@+id/valueOpcao1" />
 
         <TextView
             android:id="@+id/labelOpcao2"
@@ -163,8 +162,8 @@
             android:layout_marginStart="8dp"
             android:hint="@string/opcao_1_preco_hint"
             android:importantForAutofill="no"
-            android:minHeight="48dp"
             android:inputType="numberDecimal"
+            android:minHeight="48dp"
             app:layout_constraintBottom_toBottomOf="@id/labelPreco1"
             app:layout_constraintStart_toEndOf="@id/labelPreco1"
             app:layout_constraintTop_toTopOf="@+id/labelPreco1" />
@@ -186,20 +185,56 @@
             android:layout_marginStart="8dp"
             android:hint="@string/opcao_2_preco_hint"
             android:importantForAutofill="no"
-            android:minHeight="48dp"
             android:inputType="numberDecimal"
+            android:minHeight="48dp"
             app:layout_constraintBottom_toBottomOf="@+id/labelPreco2"
             app:layout_constraintStart_toEndOf="@id/labelPreco2"
             app:layout_constraintTop_toTopOf="@+id/labelPreco2" />
 
-        <TextView
+        <Button
+            android:id="@+id/resultadoBt"
             android:layout_width="wrap_content"
             android:layout_height="wrap_content"
-            android:layout_marginTop="8dp"
+            android:layout_marginTop="16dp"
             android:text="@string/resultado"
-            android:textSize="20sp"
+            android:textSize="16sp"
             app:layout_constraintStart_toStartOf="@id/labelPreco2"
             app:layout_constraintTop_toBottomOf="@id/precoCombustivel2" />
+
+        <com.google.android.material.card.MaterialCardView
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_margin="16dp"
+            app:cardCornerRadius="4dp"
+            app:layout_constraintStart_toStartOf="@id/resultadoBt"
+            app:layout_constraintTop_toBottomOf="@id/resultadoBt"
+            app:strokeColor="#808080"
+            app:strokeWidth="1dp">
+
+            <LinearLayout
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:orientation="vertical"
+                android:padding="16dp"
+                >
+                <TextView
+                    android:id="@+id/resultadoDescricao"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:text="@string/resultado_descricao"
+                    android:textSize="20sp" />
+
+                <TextView
+                    android:id="@+id/resultadoDescricao2"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:layout_marginTop="8dp"
+                    android:text="@string/resultado_descricao_2" />
+
+            </LinearLayout>
+
+
+        </com.google.android.material.card.MaterialCardView>
 
 
     </androidx.constraintlayout.widget.ConstraintLayout>
