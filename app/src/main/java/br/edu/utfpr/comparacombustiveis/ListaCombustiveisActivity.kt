@@ -4,7 +4,7 @@ import android.os.Bundle
 import androidx.appcompat.app.AppCompatActivity
 import br.edu.utfpr.comparacombustiveis.databinding.ActivityListaCombustiveisBinding
 
-class ListaCombustiveis : AppCompatActivity() {
+class ListaCombustiveisActivity : AppCompatActivity() {
     private lateinit var binding: ActivityListaCombustiveisBinding
     override fun onCreate(savedInstanceState: Bundle?) {
         super.onCreate(savedInstanceState)

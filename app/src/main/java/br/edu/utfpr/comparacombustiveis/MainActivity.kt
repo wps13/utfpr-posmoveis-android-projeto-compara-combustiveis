@@ -144,7 +144,7 @@ class MainActivity : AppCompatActivity() {
     }
 
     private fun onOpcaoClick() {
-        val intent = Intent(this, ListaCombustiveis::class.java)
+        val intent = Intent(this, ListaCombustiveisActivity::class.java)
 
         getOpcao.launch(intent)
     }

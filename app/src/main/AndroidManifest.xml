@@ -16,7 +16,7 @@
             android:name=".InfoActivity"
             android:exported="false" />
         <activity
-            android:name=".ListaCombustiveis"
+            android:name=".ListaCombustiveisActivity"
             android:exported="false" />
         <activity
             android:name=".MainActivity"
