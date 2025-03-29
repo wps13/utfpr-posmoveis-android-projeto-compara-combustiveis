@@ -5,7 +5,6 @@ import android.os.Bundle
 import androidx.activity.result.contract.ActivityResultContracts
 import androidx.appcompat.app.AppCompatActivity
 import br.edu.utfpr.comparacombustiveis.databinding.ActivityMainBinding
-import java.lang.Math.floorDiv
 import kotlin.text.*
 
 class MainActivity : AppCompatActivity() {
@@ -30,6 +29,15 @@ class MainActivity : AppCompatActivity() {
         binding.resultadoBt.setOnClickListener {
             onResultadoClick()
         }
+
+        binding.imageView.setOnClickListener {
+            onInfoClick()
+        }
+    }
+
+    private fun onInfoClick() {
+        val intent = Intent(this, InfoActivity::class.java)
+        startActivity(intent)
     }
 
     private fun onResultadoClick() {

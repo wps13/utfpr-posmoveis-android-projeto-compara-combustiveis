@@ -24,4 +24,8 @@
         O álcool rende %s%% da gasolina,
         assim o preço máximo que compensa abastecer álcool é %s
     </string>
+    <string name="info_title">Ajuda</string>
+    <string name="info_descricao">O aplicativo Compara Combustíveis serve para comparar preços de combustíveis álcool e gasolina, de forma a definir o mais vantajoso para abastecer carros flex. \n\nFoi considerado o consumo urbano do chevrolet ônix como referência de valores.</string>
+    <string name="info_data">Feito em 2025</string>
+    <string name="info_icon">Icone de fechar</string>
 </resources>
