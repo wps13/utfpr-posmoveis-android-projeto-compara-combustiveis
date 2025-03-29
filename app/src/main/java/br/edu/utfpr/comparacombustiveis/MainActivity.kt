@@ -1,5 +1,6 @@
 package br.edu.utfpr.comparacombustiveis
 
+import android.annotation.SuppressLint
 import android.content.Intent
 import android.os.Bundle
 import androidx.activity.result.contract.ActivityResultContracts
@@ -40,6 +41,7 @@ class MainActivity : AppCompatActivity() {
         startActivity(intent)
     }
 
+    @SuppressLint("DefaultLocale")
     private fun onResultadoClick() {
         val errorMessage = "É necessário definir um combustível"
 
