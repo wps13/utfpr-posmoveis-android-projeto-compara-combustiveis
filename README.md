@@ -10,13 +10,13 @@ Consumo considerado (urbano):
 
 A aplicação considera os combustíveis fornecidos, define o mais barato e calcula o preço máximo que compensa abastecer com álcool.
 
-Estado inicial:
-![App Compara Combustiveis - Tela inicial](https://github.com/user-attachments/assets/624c6756-8460-43bb-9268-41ab0552985c)
+**Estado inicial**:
 
-Resultado com combustíveis iguais fornecidos:
+<img width=300 src="https://github.com/user-attachments/assets/624c6756-8460-43bb-9268-41ab0552985c" />
 
-![App Compara Combustiveis - Resultado de cálculo com combustiveis iguais](https://github.com/user-attachments/assets/1e6913c1-e713-4930-80d4-3c29743be2ad)
 
-Resultado com combustíveis diferentes:
+**Resultados**:
 
-![App Compara Combustiveis - Resultado de cálculo com combustiveis diferentes](https://github.com/user-attachments/assets/be2c7efd-9834-407d-a9e6-13d4a001b866)
+| Combustíveis iguais | Combustíveis diferentes | 
+| ------ | ----- |
+| <img width=300 src="https://github.com/user-attachments/assets/1e6913c1-e713-4930-80d4-3c29743be2ad" />| <img width=300 src="https://github.com/user-attachments/assets/be2c7efd-9834-407d-a9e6-13d4a001b866" /> | 
