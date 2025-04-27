@@ -4,8 +4,10 @@ import android.annotation.SuppressLint
 import android.content.Intent
 import android.os.Bundle
 import android.text.Editable
+import android.view.View
 import androidx.activity.result.contract.ActivityResultContracts
 import androidx.appcompat.app.AppCompatActivity
+import androidx.transition.Visibility
 import br.edu.utfpr.comparacombustiveis.databinding.ActivityMainBinding
 import kotlin.text.*
 
@@ -108,7 +110,7 @@ class MainActivity : AppCompatActivity() {
 
         binding.resultadoDescricao2.text =
             getString(R.string.resultado_descricao_2, rendimentoFormatado, precoMaxFormatado)
-
+        binding.resultadoDescricao2.visibility = View.VISIBLE
     }
 
     private fun checaPrecosVazios(
@@ -150,6 +152,7 @@ class MainActivity : AppCompatActivity() {
             )
             binding.resultadoDescricao2.text =
                 getString(R.string.resultado_descricao_2, "", "")
+            binding.resultadoDescricao2.visibility = View.INVISIBLE
             return true
         }
         return false
